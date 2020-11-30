@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>ЛАЗЕРВУД | Мастерская лазерной резки</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<div class="svgsymbols" style="display:none">
+		<!-- inject:svg -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<symbol id="close" viewBox="0 0 24 24">
+				<path d="M24 20.188l-8.315-8.209 8.2-8.282L20.188 0l-8.212 8.318L3.666.115 0 3.781l8.321 8.24-8.206 8.313L3.781 24l8.237-8.318 8.285 8.203z"></path>
+			</symbol>
+			<symbol id="menu" viewBox="0 0 455 378">
+				<path d="M455 75.6H0V0h455v75.6zm0 75.6H0v75.6h455v-75.6zm0 151.2H0V378h455v-75.6z"></path>
+			</symbol>
+			<symbol id="percentage" viewBox="0 0 309 321">
+				<path d="M133.058 124.494c12.369-13.416 19.184-31.412 19.184-50.678C152.242 37.134 126.041 0 75.955 0 52.646 0 32.982 8.006 19.086 23.152 6.777 36.57 0 54.562 0 73.816c0 36.686 26.09 73.818 75.955 73.818 23.396.001 43.146-7.999 57.103-23.14zM75.955 34.322c27.443 0 39.941 20.486 39.941 39.52 0 10.354-3.484 19.939-9.816 26.986-7.064 7.871-17.33 12.033-29.68 12.033-28.137 0-40.955-20.484-40.955-39.516 0-19.421 12.528-39.023 40.51-39.023zm182.158-5.846c-4.539.082-10.736 2.912-13.772 6.287L19.025 285.275c-3.035 3.377-.885 8.111 3.654 8.111h29.49c4.54 0 10.73-2.768 13.76-6.148L289.852 36.777c3.029-3.383 2.828-8.887-4.672-8.885l-27.067.584zm-24.627 147.346c-22.859 0-42.15 7.858-55.783 22.715-12.074 13.158-18.726 30.811-18.726 49.699 0 35.984 25.594 72.412 74.51 72.412 22.957 0 42.326-7.85 56.02-22.701 12.135-13.162 18.818-30.816 18.818-49.711-.001-35.984-25.706-72.414-74.839-72.414zm.442 111.596c-27.375 0-39.848-20.557-39.848-39.648 0-10.397 3.482-20.018 9.809-27.092 7.053-7.894 17.287-12.066 29.598-12.066 27.377 0 39.844 20.553 39.844 39.65 0 10.395-3.483 20.018-9.805 27.092-7.055 7.892-17.29 12.064-29.598 12.064z"></path>
+			</symbol>
+			<symbol id="ruble" viewBox="0 0 263 290">
+				<path d="M6.573 243.125H52.57v39.432c0 1.918.614 3.489 1.849 4.717 1.232 1.235 2.806 1.853 4.724 1.853h34.291c1.78 0 3.32-.618 4.62-1.853 1.301-1.228 1.95-2.799 1.95-4.717v-39.432h103.699c1.914 0 3.489-.61 4.723-1.845 1.236-1.235 1.849-2.806 1.849-4.725V210.27c0-1.907-.613-3.489-1.849-4.717-1.231-1.235-2.809-1.853-4.723-1.853H100.001v-24.232h69.818c27.378 0 49.723-8.342 67.045-25.051 17.316-16.691 25.978-38.251 25.978-64.683 0-26.414-8.662-47.975-25.978-64.683C219.545 8.359 197.196 0 169.819 0H59.141c-1.919 0-3.49.617-4.724 1.845-1.232 1.235-1.85 2.817-1.85 4.724v129.166H6.574c-1.918 0-3.49.649-4.724 1.949-1.232 1.301-1.85 2.841-1.85 4.62v30.593c0 1.919.614 3.491 1.849 4.725 1.235 1.236 2.803 1.845 4.724 1.845H52.57v24.232H6.573c-1.918 0-3.49.618-4.724 1.854C.618 206.78 0 208.359 0 210.269v26.286c0 1.918.614 3.49 1.849 4.724 1.234 1.236 2.805 1.846 4.724 1.846zM100 43.743h65.711c14.509 0 26.212 4.242 35.113 12.73 8.897 8.488 13.347 19.58 13.347 33.264 0 13.691-4.45 24.787-13.347 33.265-8.901 8.495-20.604 12.737-35.113 12.737H100V43.743z"></path>
+			</symbol>
+			<symbol id="size" viewBox="0 0 384 384">
+				<g>
+					<path d="M380.479 327.52l-36-36c-7.568-7.568-20.48-2.176-20.48 8.48v20h-260V60h20c10.704 0 16.032-12.96 8.48-20.48l-36-36c-4.688-4.688-12.288-4.688-16.976 0l-35.984 36C-4.017 47.04 1.311 60 12 60h20v260H16c-8.848 0-16 7.168-16 16s7.152 16 16 16h16v16c0 8.832 7.152 16 16 16 8.848 0 16-7.168 16-16v-16h260v20c0 10.704 12.976 15.984 20.48 8.48l36-36a11.984 11.984 0 000-16.96z"></path>
+					<path d="M208 64l112 48-112 48-112-48 112-48zm-16 123.952l-96-41.136V240a7.996 7.996 0 005.12 7.472L192 282.416v-94.464zm32 0v94.464l90.88-34.96c3.088-1.168 5.12-4.144 5.12-7.456v-93.184l-96 41.136z"></path>
+				</g>
+			</symbol>
+		</svg>
+		<!-- endinject -->
+	</div>
+
+	<header class="header">
+		<div class="container">
+			<h1 class="header__heading">Мастерская лазерной резки ЛАЗЕРВУД</h1>
+		</div>
+		<div class="nav__wrapper">
+			<nav class="nav">
+				<button class="nav__btn">
+					<svg class="nav__btn-icon">
+						<use xlink:href="#menu"></use>
+					</svg>
+					<span class="nav__btn-label">Меню</span>
+				</button>
+			</nav>
+		</div>
+	</header>
+
+	<section class="about">
+		<div class="container">
+			<p class="text">Наша мастерская работает с различными видами неметаллических материалов.</p>
+			<p class="text">Мы принимаем заказы на лазерную резку и гравировку материалов:</p>
+			<ul class="materials">
+				<li class="materials__item">фанера</li>
+				<li class="materials__item">МДФ</li>
+				<li class="materials__item">древесина и шпон</li>
+				<li class="materials__item">оргстекло (акриловое стекло)</li>
+				<li class="materials__item">пластик</li>
+				<li class="materials__item">ПЭТ</li>
+				<li class="materials__item">полиэтилен</li>
+				<li class="materials__item">полистирол</li>
+				<li class="materials__item">пенопласт</li>
+				<li class="materials__item">поролон</li>
+				<li class="materials__item">бумага и картон</li>
+				<li class="materials__item">ткань</li>
+				<li class="materials__item">кожа и замша</li>
+			</ul>
+		</div>
+		<div class="about__more">
+			<p class="text text--light">Подробнее о материалах и стоимости Вы можете узнать в разделе
+				<br>
+				<a class="about__more-link" href="#"><span>Цены</span></a>
+				<br>или по телефону <a class="about__more-phone about__more-link" href="tel:79154606240"><span>+79154606240</span></a>
+			</p>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<h1 class="features__heading">Наши преимущества</h1>
+			<ul class="features__list">
+				<li class="features__item">
+					<div class="circle circle-1">
+						<div class="circle circle-2">
+							<div class="circle circle-3">
+								<svg class="features__item-icon">
+									<use xlink:href="#ruble"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2 class="features__item-label">1000 рублей<br>Минимальная сумма заказа</h2>
+				</li>
+				<li class="features__item">
+					<div class="circle circle-1">
+						<div class="circle circle-2">
+							<div class="circle circle-3">
+								<svg class="features__item-icon">
+									<use xlink:href="#size"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2 class="features__item-label">1600 х 1000<br>Размер рабочего поля станка</h2>
+				</li>
+				<li class="features__item">
+					<div class="circle circle-1">
+						<div class="circle circle-2">
+							<div class="circle circle-3">
+								<svg class="features__item-icon">
+									<use xlink:href="#percentage"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2 class="features__item-label">Даём скидку на крупный заказ</h2>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container">
+			<h1 class="gallery__heading">Примеры работ</h1>
+			<ul class="gallery__list">
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/001-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/001-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/001-1920.webp" type="image/webp">
+									<source srcset="img/jpg/001-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/001-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/001-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/003-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/003-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/003-1920.webp" type="image/webp">
+									<source srcset="img/jpg/003-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/003-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/003-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/005-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/005-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/005-1920.webp" type="image/webp">
+									<source srcset="img/jpg/005-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/005-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/005-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/006-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/006-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/006-1920.webp" type="image/webp">
+									<source srcset="img/jpg/006-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/006-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/006-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/002-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/002-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/002-1920.webp" type="image/webp">
+									<source srcset="img/jpg/002-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/002-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/002-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/004-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/004-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/004-1920.webp" type="image/webp">
+									<source srcset="img/jpg/004-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/004-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/004-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/007-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/007-900.webp" type="image/webp">
+								<source srcset="img/jpg/007-320.jpg" media="(max-width: 480px)">
+									<img src="img/jpg/007-900.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/008-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/008-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/008-1920.webp" type="image/webp">
+									<source srcset="img/jpg/008-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/008-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/008-1920.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/009-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/009-900.webp" type="image/webp">
+								<source srcset="img/jpg/009-320.jpg" media="(max-width: 480px)">
+									<img src="img/jpg/009-900.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/010-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/010-900.webp" type="image/webp">
+								<source srcset="img/jpg/010-320.jpg" media="(max-width: 480px)">
+									<img src="img/jpg/010-900.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/011-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/011-900.webp" type="image/webp">
+								<source srcset="img/jpg/011-320.jpg" media="(max-width: 480px)">
+									<img src="img/jpg/011-900.jpg" alt="#">
+					</picture>
+				</li>
+				<li class="gallery__item">
+					<picture class="gallery__item-image">
+						<source srcset="img/webp/012-320.webp" type="image/webp" media="(max-width: 480px)">
+							<source srcset="img/webp/012-768.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/webp/012-1920.webp" type="image/webp">
+									<source srcset="img/jpg/012-320.jpg" media="(max-width: 480px)">
+										<source srcset="img/jpg/012-768.jpg" media="(max-width: 768px)">
+											<img src="img/jpg/012-1920.jpg" alt="#">
+					</picture>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="price">
+		<div class="container">
+			<h1 class="price__heading">Цены на лазерную резку и гравировку</h1>
+			<p class="price__banner">Приведенные ниже цены - розничные и могут быть ниже в зависимости от объёмов и сроков Вашего заказа.
+				<br>Нашим постоянным клиентам предоставляются скидки.</p>
+			<ul class="price__list">
+				<li class="price__item">
+					<h2 class="price__item-heading">Лазерная гравировка</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Площадная</span>
+							<span>2,5 р.за 1 кв.см</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Контурная</span>
+							<span>от 12 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Фанера, МДФ</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 0,5-3 мм</span>
+							<span>от 14 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 4 мм</span>
+							<span>от 21 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 6 мм</span>
+							<span>от 29 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 8 мм</span>
+							<span>от 42 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Дерево, шпон</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 4 мм</span>
+							<span>от 22 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 5 мм</span>
+							<span>от 27 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 6 мм</span>
+							<span>от 30 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 8 мм</span>
+							<span>от 37 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">ПЭТ (ПЭТФ)</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина до 0,5 мм</span>
+							<span>от 13.7 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 0,7 мм</span>
+							<span>от 15.5 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 1 мм</span>
+							<span>от 18 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 1.5 мм</span>
+							<span>от 20 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 2 мм</span>
+							<span>от 22 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Оргстекло, акриловое стекло, пластик</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 3 мм</span>
+							<span>от 15 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 4 мм</span>
+							<span>от 22 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 5 мм</span>
+							<span>от 29 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 6 мм</span>
+							<span>от 31 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 8 мм</span>
+							<span>от 44 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Кожа</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 1 мм</span>
+							<span>от 18 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 2 мм</span>
+							<span>от 22 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 3 мм</span>
+							<span>от 37 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 4 мм</span>
+							<span>от 60 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Картон и бумага</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>до 100 г/м2</span>
+							<span>от 4 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>до 300 г/м2</span>
+							<span>от 12 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>до 600 г/м2</span>
+							<span>от 15 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Гофрокартон</span>
+							<span>от 21 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Полиэтилен</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 1 мм</span>
+							<span>от 22.5 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 2 мм</span>
+							<span>от 25 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 3 мм</span>
+							<span>от 27.5 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Ткани</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span></span>
+							<span>от 7 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+				<li class="price__item">
+					<h2 class="price__item-heading">Резина</h2>
+					<ul class="price__sublist">
+						<li class="price__sublist-item">
+							<span>Толщина 1 мм</span>
+							<span>от 28 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 2 мм</span>
+							<span>от 35 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 3 мм</span>
+							<span>от 52 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 4 мм</span>
+							<span>от 72 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 5 мм</span>
+							<span>от 94 руб / пог.м</span>
+						</li>
+						<li class="price__sublist-item">
+							<span>Толщина 6 мм</span>
+							<span>от 120 руб / пог.м</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<p class="price__sale">Если рез производится из Вашего материала, который состоит из множества небольших элементов, каждый из которых режется отдельным прогоном, то возможно применение коэффициента наценки 25%.</p>
+		</div>
+	</section>
+
+	<footer class="contacts">
+		<div class="container">
+			<h1 class="contacts__heading">Контакты</h1>
+			<ul class="contacts__list">
+				<li class="contacts__item">
+					<span class="contacts__item-title">Номер телефона:</span>
+					<a class="contacts__link" href="tel:79154606240">+79154606240</a>
+				</li>
+				<li class="contacts__item">
+					<span class="contacts__item-title">Почта:</span>
+					<a class="contacts__link" href="mailto:lazer.vud@bk.ru">Lazer.vud@bk.ru</a>
+				</li>
+				<li class="contacts__item">
+					<span class="contacts__item-title">Адрес мастерской:</span>
+					<span>Москва, м.Сходненская, ул.Свободы 35 стр 35.</span>
+				</li>
+				<li class="contacts__item">
+					<span class="contacts__item-title">Часы работы:</span>
+					<span>Пн-пт: 10:00- 19:00, без перерыва на обед.</span>
+					<br>
+					<span>Суббота, воскресенье по договоренности.</span>
+				</li>
+			</ul>
+			<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1883.9117018597237!2d37.44558234891445!3d55.839046298536154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b547e46037ca6f%3A0xca05f5dfc6a0f760!2zNTXCsDUwJzE5LjAiTiAzN8KwMjYnNDkuNCJF!5e0!3m2!1sru!2sru!4v1606610752203!5m2!1sru!2sru"
+			title="map" width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</footer>
+
+
+	<section class="menu-popup">
+		<button class="menu-popup__btn-close">
+			<svg class="menu-popup__btn-icon">
+				<use xlink:href="#close"></use>
+			</svg>
+			Закрыть
+		</button>
+		<div class="container">
+			<ul class="menu-popup__list">
+				<li class="menu-popup__item">
+					<a class="menu-popup__link" href="#">О нас</a>
+				</li>
+				<li class="menu-popup__item">
+					<a class="menu-popup__link" href="#">Наши преимущества</a>
+				</li>
+				<li class="menu-popup__item">
+					<a class="menu-popup__link" href="#">Примеры работ</a>
+				</li>
+				<li class="menu-popup__item">
+					<a class="menu-popup__link" href="#">Цены</a>
+				</li>
+				<li class="menu-popup__item">
+					<a class="menu-popup__link" href="#">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="lightbox">
+		<div class="backdrop">
+			<button class="lightbox__btn-close">
+				<svg class="lightbox__btn-icon">
+					<use xlink:href="#close"></use>
+				</svg>
+				Закрыть
+			</button>
+		</div>
+		<div class="lightbox__image-wrapper">
+			<img class="lightbox__image" src="" alt="#">
+		</div>
+	</div>
+
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
